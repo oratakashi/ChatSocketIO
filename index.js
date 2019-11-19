@@ -1,14 +1,16 @@
-const http = require('http');
+const express = require('express'),
+http = require('http'),
+app = express(),
+server = http.createServer(app),
+io = require('socket.io').listen(server);
+app.get('/', (req, res) => {
 
-const hostname = '192.168.1.8';
-const port = 3000;
-
-const server = http.createServer((req, res) => {
-  res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World!\n');
+res.send('Chat Server is running on port 3000')
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+
+server.listen(3000, "192.168.1.8", ()=>{
+
+console.log('Node app is running on port 3000')
+
 });
