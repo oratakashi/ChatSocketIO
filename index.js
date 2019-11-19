@@ -4,8 +4,10 @@ const express = require('express'),
     server = http.createServer(app),
     io = require('socket.io').listen(server);
 app.get('/', (req, res) => {
-
     res.send('Chat Server is running on port 3000')
+    socket.connect(){
+        socket.emit('join', 'Orata');
+    }
 });
 io.on('connection', (socket) => {
 
@@ -60,7 +62,6 @@ io.on('connection', (socket) => {
 
 
 server.listen(3000, "192.168.1.8", () => {
-
     console.log('Node app is running on port 3000')
 
 })
