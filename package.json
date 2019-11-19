@@ -1,0 +1,8 @@
+{
+    "name": "ChatApp",
+    "description": "Testing Global Village Chat",
+    "version": "1.0.0",
+    "engines": {
+      "node": ">=10.135.0"
+    }
+  }
