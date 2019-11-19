@@ -58,7 +58,7 @@ io.on('connection', (socket) => {
 
 
 
-server.listen(3000, "192.168.1.8", () => {
+server.listen(3000, () => {
     console.log('Node app is running on port 3000')
 
 })
