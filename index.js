@@ -5,9 +5,6 @@ const express = require('express'),
     io = require('socket.io').listen(server);
 app.get('/', (req, res) => {
     res.send('Chat Server is running on port 3000')
-    socket.connect(){
-        socket.emit('join', 'Orata');
-    }
 });
 io.on('connection', (socket) => {
 
