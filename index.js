@@ -37,7 +37,7 @@ io.on('connection', (socket) => {
 
     })
 
-    socket.on('disconnect', function () {
+    socket.on('disconnect', function (userNickname) {
 
         console.log(userNickname + ' has left ')
 
