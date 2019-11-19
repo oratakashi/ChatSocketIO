@@ -4,5 +4,8 @@
     "version": "1.0.0",
     "engines": {
       "node": ">=10.135.0"
+    },
+    "scripts": {
+        "start": "node index.js"
     }
   }
